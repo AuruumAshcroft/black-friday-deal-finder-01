@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealScout — Black Friday 2026 Deal Finder</title>
+<meta name="description" content="50 real Black Friday and Cyber Monday deals, each checked on 27 November 2026 at its store or in a deals roundup that names the store, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <p class="brand">DealScout</p>
+    <h1>Black Friday 2026, <span>checked deal by deal.</span></h1>
+    <p class="tagline">50 real deals from 8 stores. Every price was read on 27 November 2026 at the store or in a roundup that names the store — and every deal carries an honest verdict: new low, strong deal, or routine sale.</p>
+    <div class="stats">
+      <span class="stat"><b>50</b> deals</span>
+      <span class="stat"><b>8</b> stores</span>
+      <span class="stat"><b>9</b> categories</span>
+      <span class="stat"><b>7</b> new lows</span>
+      <span class="stat">Best cut: <b>67% off</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <input type="search" id="search" placeholder="Search deals, stores, categories…" aria-label="Search deals">
+    <label for="category">Category</label>
+    <select id="category"></select>
+    <label for="store">Store</label>
+    <select id="store"></select>
+    <label for="discount">Discount</label>
+    <select id="discount">
+      <option value="0">Any discount</option>
+      <option value="25">25% off or more</option>
+      <option value="40">40% off or more</option>
+      <option value="50">50% off or more</option>
+    </select>
+    <label for="sort">Sort</label>
+    <select id="sort">
+      <option value="best">Best deal first</option>
+      <option value="discount">Biggest discount</option>
+      <option value="saving">Biggest saving ($)</option>
+      <option value="price-low">Lowest price</option>
+      <option value="price-high">Highest price</option>
+    </select>
+  </div>
+</div>
+
+<main>
+  <p class="count" id="count"></p>
+  <div class="grid" id="grid"></div>
+
+  <section class="method">
+    <h2>How these deals were checked</h2>
+    <p>Every deal on this page was found and checked by the maker on <strong>27 November 2026</strong>, reading the price at the named store or in a deals roundup that names the store. Each card shows when its price was checked and where it was read; the detail view (click any card) links to that source.</p>
+    <p>Verdicts mean:</p>
+    <ul>
+      <li><strong>New low</strong> — the lowest price reported for that product so far.</li>
+      <li><strong>Strong deal</strong> — a genuinely good price, well below usual.</li>
+      <li><strong>Routine sale</strong> — a normal sale. Fine to buy, nothing special.</li>
+      <li><strong>Inflated</strong> — the “usual” price is padded, so the cut looks bigger than it is. None of the deals on this page carry this label.</li>
+    </ul>
+    <p>Prices change during Black Friday week — the store link on each card takes you to the product at that store so you can confirm the price before you buy. Streaming deals show a monthly price.</p>
+  </section>
+</main>
+
+<footer>DealScout — an independent deal finder. Not affiliated with any store named here. Prices checked 27 November 2026.</footer>
+
+<dialog id="detail">
+  <div class="detail-body">
+    <button class="detail-close" id="detail-close" type="button">Close ✕</button>
+    <div id="detail-body"></div>
+  </div>
+</dialog>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
